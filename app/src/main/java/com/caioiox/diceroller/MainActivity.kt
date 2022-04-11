@@ -11,12 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         binding.rollButton.setOnClickListener { rollDice() }
-//        binding.rollButton.setOnClickListener {
-//            Toast.makeText(this, "Dado rolado", Toast.LENGTH_SHORT).show() }
-
-
     }
     private fun rollDice(){
         val drawableResource = when (Dice(6).dice){
@@ -28,6 +23,5 @@ class MainActivity : AppCompatActivity() {
             else-> binding.rollImage.setImageResource(R.drawable.dice_6)
         }
         return drawableResource
-//        binding.rollResult.text = Dice(6).dice.toString()
     }
 }
